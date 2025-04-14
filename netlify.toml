@@ -1,4 +1,7 @@
 [build]
-  base = "src"       # Netlify will treat "src" as the root during build
-  command = "pip install -r requirements.txt && streamlit run app.py"
-  publish = "."      # Not needed for Streamlit, but keeps Netlify happy
+base = "src"       # Netlify will treat "src" as the root during build
+command = "pip install -r requirements.txt && streamlit run app.py"
+publish = "."      # Not needed for Streamlit, but keeps Netlify happy
+# Cache Python dependencies
+[[plugins]]
+package = "netlify-plugin-python-caching"
