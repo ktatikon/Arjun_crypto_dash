@@ -5,4 +5,4 @@ publish = "."      # Not needed for Streamlit, but keeps Netlify happy
 # Cache Python dependencies
 [[plugins]]
 package = "netlify-plugin-python-caching"
-package = "@netlify/plugin-lighthouse"
+
