@@ -1,3 +1,4 @@
 [build]
-command = "pip install -r src/requirements.txt && streamlit run src/app.py"
-publish = "."
+  base = "src"       # Netlify will treat "src" as the root during build
+  command = "pip install -r requirements.txt && streamlit run app.py"
+  publish = "."      # Not needed for Streamlit, but keeps Netlify happy
